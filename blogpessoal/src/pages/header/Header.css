@@ -1,0 +1,87 @@
+﻿header {
+   background-color: #e9a0a0;
+   border-radius: 0 0 1.8rem 1.8rem ;
+}
+
+header #nav-flex {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 2rem;
+   max-width: 75rem;
+   margin: 0 auto;
+   height: 5rem;
+}
+
+header #nav-flex #div-flex {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 1rem;
+}
+
+header #nav-flex #div-flex #form-flex {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+header #nav-flex #div-flex #form-flex #nav-busca {
+   border: none;
+   outline: none;
+   border-radius: 1.6rem;
+   padding: 0.6rem;
+   width: 17rem;
+   background-color: #f7f7f7a2;
+   font-size: 0.9rem;
+   font-weight: 700;
+   font-family: 'Comfortaa', sans-serif;
+   text-align: center;
+}
+
+header #nav-flex #div-flex #form-flex button {
+   background-color: #e9a0a0;
+   border: none;
+
+}
+
+header #nav-flex #div-flex #form-flex button img {
+   background-color: #e9a0a0;
+   width: 2rem;
+   height: 2rem;
+   cursor: pointer;
+}
+
+header #nav-flex #div-flex #nome-blog {
+   text-decoration: none;
+   font-weight: 700;
+   font-size: 1.7rem;
+   color: rgb(18, 10, 138);
+}
+
+header #nav-flex #div-flex #nome-blog:hover {
+   color: rgb(19, 85, 170);
+   font-size: 1.75rem;
+   transition: 0.7s;
+}
+
+header #nav-flex #nav-list {
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   gap: 1.7rem;
+}
+
+header #nav-flex .nav-links a {
+   text-decoration: none;
+   font-weight: 600;
+   font-size: 1.3rem;
+   color: rgb(18, 10, 138);
+}
+
+header #nav-flex .nav-links a:hover {
+   color: rgb(19, 85, 170);
+   transition: 0.3s;
+}
+

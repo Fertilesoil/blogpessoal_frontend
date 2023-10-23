@@ -1,0 +1,21 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+   font-family: 'Commissioner', sans-serif;
+}
+
+header, nav {
+   font-family: 'Comfortaa', sans-serif;
+}
+
+body {
+   background-color: #084d6e;
+}
