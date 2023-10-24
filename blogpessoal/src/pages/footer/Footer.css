@@ -1,6 +1,6 @@
 ﻿footer {
    background-color: #e9a0a0;
-   border-radius: 1.8rem 1.8rem 0 0;
+   border-radius: 1.4rem 1.4rem 0 0;
 }
 
 footer #footer-flex {
@@ -9,16 +9,51 @@ footer #footer-flex {
    margin: 0 auto;
    height: 5.8rem;
    display: flex;
-   justify-content: space-evenly;
+   justify-content: center;
    align-items: center;
    gap: 3rem;
+}
+
+footer #footer-flex .footer-row {
+   align-items: center;
+   width: 400px;
+}
+
+footer #footer-flex .footer-row .hr-footer {
+   width: 400px;
+   height: 6px;
+   border: none;
+   outline: none;
+   background-color: rgba(18, 31, 39, 0.02);
+   box-shadow: -8px 8px 8px rgb(19, 41, 54);
 }
 
 footer #footer-flex .footer-img-format {
    text-decoration: none;
 }
 
+/* Se você retirar o padding fica totalmente outro estilo. Tire dúvida depois sobre o
+   esbarramento do link que fica doidão sem o padding */
+
+footer #footer-flex .footer-img-format:hover {
+   width: 8rem;
+   height: 5.40rem;
+   border-radius: 50px;
+   padding: 0.2em;
+   border: none;
+   outline: none;
+   box-shadow: -12px 12px 8px rgba(55, 59, 59, 0.700),
+      inset -8px -8px 8em rgba(142, 247, 255, 0.200),
+      inset -8px -8px 8em rgba(5, 129, 196, 0.380);
+}
+
 footer #footer-flex .footer-img-format img {
    width: 8rem;
-   height: 8rem;
+   height: 5rem;
+   border-radius: 47px;
+   border: none;
+   outline: none;
+   box-shadow: -8px 8px 4px rgba(55, 59, 59, 0.300),
+      inset -8px -8px 16px rgba(77, 112, 131, 0.7),
+      inset 8px 8px 12px rgba(77, 112, 131, 0.9);
 }
