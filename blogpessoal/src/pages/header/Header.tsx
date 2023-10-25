@@ -7,7 +7,7 @@ function header() {
                <div id='div-flex'>
                   <a id="nome-blog" href="">BlogPessoal</a>
                   <form id='form-flex' action="#">
-                     <input id="nav-busca" type="text" />
+                     <input id="nav-busca" type="text" placeholder='Faça uma pesquisa' />
                      <button type='submit'><img src="src\assets\icons8-pesquisar-64.svg" alt="" /></button>
                   </form>
                </div>

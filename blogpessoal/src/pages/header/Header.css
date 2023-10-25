@@ -32,7 +32,7 @@ header #nav-flex #div-flex #form-flex #nav-busca {
    outline: none;
    border-radius: 1.6rem;
    padding: 0.6rem;
-   width: 17rem;
+   width: 22rem;
    background-color: #f7f7f7a2;
    font-size: 0.9rem;
    font-weight: 700;
@@ -43,7 +43,6 @@ header #nav-flex #div-flex #form-flex #nav-busca {
 header #nav-flex #div-flex #form-flex button {
    background-color: #e9a0a0;
    border: none;
-
 }
 
 header #nav-flex #div-flex #form-flex button img {
