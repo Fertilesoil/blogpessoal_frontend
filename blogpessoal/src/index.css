@@ -1,4 +1,6 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
    margin: 0;
@@ -21,8 +23,3 @@ header, nav {
 body {
    background-color: #084d6e;
 }
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

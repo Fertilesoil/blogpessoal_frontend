@@ -21,3 +21,22 @@ export const cadastrarUsuario = async (url: string, dados: Object, setDados: Fun
    interessam, no nosso caso o token que está dentro de data. Data faz parte dos elementos 
    retornados dentro do objeto resposta. A função setDados armazena esses dados.*/
 
+export const buscar = async (url: string, setDados: Function, header: Object) => { 
+   const resposta = await api.get(url, header) 
+   setDados(resposta.data)
+} /* Essa é a nossa função para buscar tema, agora todas as requsições que passarmos para buscar
+informaçõs na nossa api conterão o header para autenticar, validar nossa requisição.  */
+
+export const cadastrar = async (url: string, dados: Object, setDados: Function, header: Object) => {
+   const resposta = await api.post(url, dados, header)
+   setDados(resposta.data)
+}
+
+export const atualizar = async (url: string, dados: Object, setDados: Function, header: Object) => {
+   const resposta = await api.put(url, dados, header)
+   setDados(resposta.data)
+}
+
+export const deletar = async (url: string, header: Object) => {
+   await api.delete(url, header)
+}

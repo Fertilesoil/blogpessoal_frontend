@@ -56,11 +56,11 @@ header #nav-flex #div-flex #nome-blog {
    text-decoration: none;
    font-weight: 700;
    font-size: 1.7rem;
-   color: rgb(18, 10, 138);
+   color: #120a8a;
 }
 
 header #nav-flex #div-flex #nome-blog:hover {
-   color: rgb(19, 85, 170);
+   color: #1355aa;
    font-size: 1.75rem;
    transition: 0.7s;
 }
@@ -76,11 +76,11 @@ header #nav-flex .nav-links a {
    text-decoration: none;
    font-weight: 600;
    font-size: 1.3rem;
-   color: rgb(18, 10, 138);
+   color: #120a8a;
 }
 
 header #nav-flex .nav-links a:hover {
-   color: rgb(19, 85, 170);
+   color: #1355aa;
    transition: 0.3s;
 }
 
