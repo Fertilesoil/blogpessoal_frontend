@@ -93,9 +93,8 @@ function DeletarTema() {
                </button>
 
                <button
-                  className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 
-                          flex items-center justify-center'
-                  onClick={deletarTema}>
+                  className='text-slate-100 bg-indigo-400 hover:bg-indigo-600 
+                           flex items-center justify-center w-full' onClick={deletarTema}>
 
                   {isLoading ?
                      <RotatingLines

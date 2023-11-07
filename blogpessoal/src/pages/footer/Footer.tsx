@@ -2,8 +2,7 @@
 
 function Footer() {
    return (
-      <>
-         <footer>
+      <footer>
             <div id='footer-flex'>
                <div className='footer-row'><hr className='hr-footer'/></div>
                <a className='footer-img-format' href="https://github.com/Fertilesoil" target='_blank'>
@@ -13,7 +12,6 @@ function Footer() {
                <div className='footer-row'><hr className='hr-footer'/></div>
             </div>
          </footer>
-      </>
    )
 }
 
