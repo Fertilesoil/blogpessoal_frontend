@@ -1,6 +1,7 @@
 ﻿import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { RotatingLines } from 'react-loader-spinner';
+import { toastAlerta } from '../../../utils/toastAlerta';
 
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
 import { AuthContext } from '../../../contexts/AuthContext';
@@ -11,11 +12,15 @@ import Postagem from '../../../models/Postagem';
 function FormularioPostagem() {
 
     const navigate = useNavigate();
+    /* A pessoa vai escolher quando mudar de página, e isso pode ser feito de forma direta clicando
+    em botões, mas quando uma ação é concluída e precisa voltar para algum lugar podemos redirecionar
+    a pessoa de forma indiret usando o useNavigate passando para ele onde deve ir  */
 
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [temas, setTemas] = useState<Tema[]>([])
 
     const [tema, setTema] = useState<Tema>({ id: 0, descricao: '', })
+
     const [postagem, setPostagem] = useState<Postagem>({} as Postagem)
 
     const { id } = useParams<{ id: string }>()
@@ -29,7 +34,8 @@ function FormularioPostagem() {
                 Authorization: token,
             },
         })
-    }
+    } /* Depois do nosso await sempre chamamos uma função, essas funções estão sempre na
+    nossa service, no caso a service buscar, onde passamos os parâmetros pedidos na service */
 
     async function buscarTemaPorId(id: string) {
         await buscar(`/temas/${id}`, setTema, {
@@ -49,7 +55,7 @@ function FormularioPostagem() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado');
+            toastAlerta('Você precisa estar logado', "erro");
             navigate('/');
         }
     }, [token])
@@ -60,7 +66,9 @@ function FormularioPostagem() {
         if (id !== undefined) {
             buscarPostagemPorId(id)
         }
-    }, [id])
+    }, [id]) /* Esse carinha aqui verifica se o valor do id que está presente na url tem uma informação
+    válida, caso tiver significa que é uma edição, então esse hook vai disparar para buscar as infos
+    dessa postagem e carregar para ser editado */
 
     useEffect(() => {
         setPostagem({
@@ -94,14 +102,14 @@ function FormularioPostagem() {
                     },
                 });
 
-                alert('Postagem atualizada com sucesso')
+                toastAlerta('Postagem atualizada com sucesso', "sucesso")
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente', "erro")
                     handleLogout()
                 } else {
-                    alert('Erro ao atualizar a Postagem')
+                    toastAlerta('Erro ao atualizar a Postagem', "info")
                 }
             }
 
@@ -113,14 +121,14 @@ function FormularioPostagem() {
                     },
                 })
 
-                alert('Postagem cadastrada com sucesso');
+                toastAlerta('Postagem cadastrada com sucesso', "sucesso");
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente', "erro")
                     handleLogout()
                 } else {
-                    alert('Erro ao cadastrar a Postagem');
+                    toastAlerta('Erro ao cadastrar a Postagem', "info");
                 }
             }
         }
@@ -173,9 +181,12 @@ function FormularioPostagem() {
                         <option value="" selected disabled>Selecione um Tema</option>
                         {temas.map((tema) => (
                             <>
-                                <option value={tema.id} > {tema.descricao}</option>
+                                <option value={tema.id} >{tema.descricao}</option>
                             </>
-                        ))}
+                        ))} /* Aqui ele captura o tema que for escolhido dentro do option e já busca ele pelo id,
+                        lembrando que apenas o tema é exibido mas o id também fica disponível.
+                            É assim que ele captura e dispara a função que fizemos lá atrás para fazer o relacionamento
+                        entre postagem e tema */
                     </select>
                 </div>
                 <button

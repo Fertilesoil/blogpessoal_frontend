@@ -1,7 +1,8 @@
-﻿import { createContext, ReactNode, useState } from "react"
+﻿import { createContext, ReactNode, useState } from "react";
 
-import UsuarioLogin from "../models/UsuarioLogin"
-import { login } from "../services/Service"
+import UsuarioLogin from "../models/UsuarioLogin";
+import { login } from "../services/Service";
+import { toastAlerta } from "../utils/toastAlerta";
 
 /* A context é como um armazenamento interno, em memória, da aplicação que guarda
    informações importantes que possam ser compartilhadas entre vários componentes
@@ -60,12 +61,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
       setIsLoading(true)
       try {
          await login(`/usuarios/logar`, userLogin, setUsuario)
-         alert("Usuário logado com sucesso")
+         toastAlerta("Usuário logado com sucesso", "sucesso")
          setIsLoading(false)
 
       } catch (error) {
          console.log(error)
-         alert("Dados do usuário inconsistentes")
+         toastAlerta("Dados do usuário inconsistentes", "erro")
          setIsLoading(false)
       }
    }

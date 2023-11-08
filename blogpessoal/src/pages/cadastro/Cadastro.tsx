@@ -2,8 +2,9 @@
 import { RotatingLines } from 'react-loader-spinner'
 import { useNavigate } from 'react-router-dom'
 
+import { toastAlerta } from '../../utils/toastAlerta'
 import { cadastrarUsuario } from '../../services/Service'
-import Usuario from '../../models/Usuario'
+import UsuarioLogin from '../../models/UsuarioLogin'
 
 import './Cadastro.css'
 
@@ -13,12 +14,13 @@ function Cadastro() {
    const [isLoading, setIsLoading] = useState<boolean>(false)
    const [confirmaSenha, setConfirmaSenha] = useState<string>("")
 
-   const [usuario, setUsuario] = useState<Usuario>({
+   const [usuario, setUsuario] = useState<UsuarioLogin>({
       id: 0,
       nome: '',
       usuario: '',
       senha: '',
-      foto: ''
+      foto: '',
+      token:""
    })
 
    useEffect(() => {
@@ -50,14 +52,14 @@ function Cadastro() {
 
          try {
             await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario)
-            alert('Usuário cadastrado com sucesso')
+            toastAlerta('Usuário cadastrado com sucesso', "sucesso")
 
          } catch (error) {
-            alert('Erro ao cadastrar o Usuário')
+            toastAlerta('Erro ao cadastrar o Usuário', "erro")
          }
 
       } else {
-         alert('Dados inconsistentes. Verifique as informações de cadastro.')
+         toastAlerta('Erro ao cadastrar o Usuário', "erro")
          setUsuario({ ...usuario, senha: "" })
          setConfirmaSenha("")
       }
