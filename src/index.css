@@ -21,5 +21,5 @@ header, nav {
 }
 
 body {
-   background-color: #084d6e;
+   background: linear-gradient(90deg, #FEDCC4 0%, #FEDCC5 30%, #FEDDC6 60%, #FEDDC6 100%);
 }

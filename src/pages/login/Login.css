@@ -1,8 +1,31 @@
-﻿.fundoLogin {
+﻿/* .fundoLogin {
    background-image: url("https://media0.giphy.com/media/Pa8Aykqv9w2ME/giphy.gif?cid=ecf05e47qu676pstt0qihj58mnk5gyrddsi9libj5n18gnsc&ep=v1_gifs_search&rid=giphy.gif&ct=g");
    background-repeat: no-repeat;
    min-height: 100vh;
    width: 100%;
    background-size: cover;
    background-position: center;
+} */
+
+.font {
+   font-family: 'Cherry Swash', sans-serif;
+}
+
+section {
+   position: absolute;
+   font-family: 'Comfortaa', sans-serif;
+}
+
+.bg-img {
+   background-image: url(/src/assets/img/cozy-login1.jpg);
+   background-size: cover;
+   background-repeat: repeat-x;
+   background-position: center;
+   opacity: 0.9;
+   object-fit: contain;
+}
+
+.bg-forms {
+   background-color: rgba(255, 255, 255, 0.19);
+   opacity: 0.92;
 }
