@@ -68,7 +68,7 @@ function Login() {
                         <i className='bg-forms cursor-pointer p-2 bg-transparent absolute right-10 border-none outline-none rounded-[3rem] '><Key size={32} weight="light" /></i></div>
 
                      <button type='submit'
-                        className='flex justify-center items-center w-[50%] h-[8%] rounded-[2.5rem] bg-[#f16d41] font-[600] text-[1.3rem] shadow-md hover:h-[8.5%] hover:w-[51%] duration-200 ease-in-out focus:w-[50%] focus:h-[8%]'>
+                        className='flex justify-center items-center w-[50%] h-[8%] rounded-[2.5rem] bg-[#f16d41] font-[300] text-[1.3rem] shadow-md hover:h-[8.5%] hover:w-[51%] duration-200 ease-in-out focus:w-[50%] focus:h-[8%]'>
                         {isLoading ? <l-treadmill
                            color={'#f5f5f5'}
                            size={40}
