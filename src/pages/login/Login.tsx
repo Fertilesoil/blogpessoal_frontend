@@ -47,25 +47,25 @@ function Login() {
 
                      <div className='flex w-[90%] h-[9%] items-center justify-center '>
                         <label htmlFor="usuario"></label>
-                        <input className='font bg-forms text-[0.9rem] cursor-pointer border-none outline-none opacity-80 rounded-[3rem] p-3 w-[100%] h-[100%]  placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[600] shadow-md'
+                        <input className='font bg-forms text-[0.9rem] cursor-pointer border-none outline-none opacity-80 rounded-[3rem] p-3 w-[100%] h-[100%]  placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[400] shadow-md'
                            type="text"
                            id="usuario"
                            name="usuario"
                            placeholder='Insira seu E-mail'
                            value={usuarioLogin.usuario}
                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
-                        <i className='bg-forms cursor-pointer p-2 bg-transparent absolute right-10 border-none outline-none rounded-[3rem] '><At size={32} weight="light" /></i></div>
+                        <i className='bg-forms cursor-pointer p-2 bg-transparent absolute right-10 border-none outline-none rounded-[3rem] '><At size={32} weight="thin" /></i></div>
 
                      <div className='flex w-[90%] h-[9%] items-center justify-center'>
                         <label htmlFor="senha"></label>
-                        <input className='font bg-forms text-[0.9rem] cursor-pointer border-none outline-none opacity-80 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[600] shadow-md'
+                        <input className='font bg-forms text-[0.9rem] cursor-pointer border-none outline-none opacity-80 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[400] shadow-md'
                            type="password"
                            id="senha"
                            name="senha"
                            placeholder='Insira sua Senha'
                            value={usuarioLogin.senha}
                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
-                        <i className='bg-forms cursor-pointer p-2 bg-transparent absolute right-10 border-none outline-none rounded-[3rem] '><Key size={32} weight="light" /></i></div>
+                        <i className='bg-forms cursor-pointer p-2 bg-transparent absolute right-10 border-none outline-none rounded-[3rem] '><Key size={32} weight="thin" /></i></div>
 
                      <button type='submit'
                         className='flex justify-center items-center w-[50%] h-[8%] rounded-[2.5rem] bg-[#f16d41] font-[300] text-[1.3rem] shadow-md hover:h-[8.5%] hover:w-[51%] duration-200 ease-in-out focus:w-[50%] focus:h-[8%]'>

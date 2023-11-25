@@ -74,7 +74,7 @@ function Cadastro() {
          <div className="caixa-encolhida-2 flex items-center w-[60rem] h-[85%] rounded-[2.5rem] border-none shadow-xl">
             {/* <div className="img-lateral bg-img-2 w-[25rem] h-[100%] min-h-[80vh] rounded-l-[2.5rem] border-none outline-none"> </div> */}
 
-            <div className="bg-forms-2 img-forms bg w-[100%] h-[100%] min-h-[80vh] flex flex-col justify-evenly rounded-[2.5rem] border-none outline-none">
+            <div className="bg-forms-2 img-forms bg w-[100%] h-[100%] min-h-[80vh] flex flex-col justify-center rounded-[2.5rem] border-none outline-none">
 
                <div className="rounded-[2.5rem] border-none outline-none">
                   <h1 className='text-[3em] text-center text-[#bb3e53] font-extrabold'>Cadastre-se</h1>
@@ -84,7 +84,7 @@ function Cadastro() {
 
                   <div className='w-[100%] h-[23%]  flex items-center justify-center'>
                      <label htmlFor="nome"></label>
-                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[600] shadow-md'
+                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[400] shadow-md'
                         placeholder='Insira seu nome'
                         type="text"
                         id="nome"
@@ -96,7 +96,7 @@ function Cadastro() {
 
                   <div className='w-[100%] h-[23%]  flex items-center justify-center'>
                      <label htmlFor="usuario"></label>
-                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[600] shadow-md'
+                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[400] shadow-md'
                         placeholder='Insira seu E-mail'
                         type="text"
                         id="usuario"
@@ -108,7 +108,7 @@ function Cadastro() {
 
                   <div className='w-[100%] h-[23%]  flex items-center justify-center'>
                      <label htmlFor="foto"></label>
-                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[600] shadow-md'
+                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[400] shadow-md'
                         placeholder='Insira o link da foto'
                         type="text"
                         id="foto"
@@ -120,7 +120,7 @@ function Cadastro() {
 
                   <div className='w-[100%] h-[23%]  flex items-center justify-center'>
                      <label htmlFor="senha"></label>
-                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[600] shadow-md'
+                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[400] shadow-md'
                         placeholder='Insira sua senha'
                         type="password"
                         id="senha"
@@ -132,7 +132,7 @@ function Cadastro() {
 
                   <div className='w-[100%] h-[23%]  flex items-center justify-center'>
                      <label htmlFor="confirmarSenha"></label>
-                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[600] shadow-md'
+                     <input className='font bg-forms-2 text-[0.9rem] cursor-pointer border-none outline-none opacity-90 rounded-[3rem] p-3 w-[100%] h-[100%] placeholder:text-black placeholder:font-[300] placeholder:indent-1.5 focus:opacity-100 focus:p-4 focus:duration-200 focus:font-[400] shadow-md'
                         placeholder='Confirme sua senha'
                         type="password"
                         id="confirmarSenha"
