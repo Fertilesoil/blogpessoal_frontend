@@ -1,6 +1,5 @@
 ﻿import { ReactNode, useContext } from 'react'
 import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
-
 import { AuthContext } from '../../contexts/AuthContext'
 
 function Footer() {
@@ -14,7 +13,7 @@ function Footer() {
    if (usuario.token !== "") {
 
       component = (
-         <div className="flex justify-center bg-indigo-900 text-white">
+         <div className="flex justify-center bg-[#F2B99E] text-[#9C9669]">
             <div className="container flex flex-col items-center py-4">
                <p className='text-xl font-bold'>
                   Blog Pessoal Generation | Copyright: {data}
