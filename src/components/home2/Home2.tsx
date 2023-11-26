@@ -1,15 +1,19 @@
-﻿import ListaPostagens from "../../components/postagens/listaPostagens/ListaPostagens"
-import FormularioPostagem from "../postagens/formularioPostagem/FormularioPostagem"
+﻿import FormularioPostagem from "../postagens/formularioPostagem/FormularioPostagem"
+import ListaPostagens from "../postagens/listaPostagens/ListaPostagens";
 
 function Home() {
    return (
       <main className="flex flex-col items-center">
 
-         <section className="relative mt-4 w-[90vw] flex items-center h-[23rem] border-dashed border-[0.2rem] rounded-[1.25rem] border-[#f16d41] px-2">
+
 
          <FormularioPostagem />
 
-         </section>
+
+
+         <ListaPostagens />
+
+
 
          {/* <div className="bg-indigo-900 flex justify-center">
             <div className='container grid grid-cols-2 text-white'>
@@ -39,7 +43,7 @@ function Home() {
          </div> */}
 
          {/* <ModalPostagem /> */}
-         <ListaPostagens />
+
 
 
       </main>

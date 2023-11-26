@@ -153,64 +153,66 @@ function FormularioPostagem() {
     const carregandoTema = tema.descricao === '';
 
     return (
+        <main className='flex flex-col justify-center items-center'> 
+            <section className="relative mt-4 w-[90vw] flex items-center h-[23rem] border-dashed border-[0.2rem] rounded-[1.25rem] border-[#f16d41] px-2">
 
+                <div className="flex items-center justify-center w-[100%] h-[21.5rem] rounded-[1.25rem] bg-[#f2b99e]">
 
+                    <div className="bg2 w-[21%] h-[100%] rounded-l-[1.25rem]"></div>
 
-        <div className="flex items-center justify-center w-[100%] h-[21.5rem] rounded-[1.25rem] bg-[#f2b99e]">
+                    <div className="flex flex-col items-center justify-between w-[79.5%] h-[95%] rounded-r-[1.25rem]]">
+                        <h1 className='text-[#bb3e53] text-[2.5rem] font'>{id !== undefined ? 'Editar Postagem' : 'Nova Postagem'}</h1>
 
-            <div className="bg2 w-[21%] h-[100%] rounded-l-[1.25rem]"></div>
+                        <form className="flex flex-col items-center justify-between w-[95%] h-[95%] rounded-r-[1.25rem]" onSubmit={gerarNovaPostagem}>
+                            <label htmlFor="titulo"></label>
+                            <input type="text"
+                                className="text font-[600] max-h-[8rem] w-[90%] inline-block resize-none text-slate-800 placeholder:text-slate-800 bg-[#f2b99e70] border-[0.2rem] border-[#8a5551d0] rounded-[1.25rem] outline-none font-[Comfortaa] p-2 indent-2 leading-5 text-[0.9rem] bg-opacity-30"
+                                placeholder="Título da postagem"
+                                value={postagem.titulo}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                                name="titulo"
+                                required />
 
-            <div className="flex flex-col items-center justify-between w-[79.5%] h-[95%] rounded-r-[1.25rem]">
-                <h1 className='text-[#bb3e53] text-[2.5rem] font'>{id !== undefined ? 'Editar Postagem' : 'Nova Postagem'}</h1>
+                            <label htmlFor="texto"></label>
+                            <textarea className="text font-[600] max-h-[8rem] w-[90%] inline-block resize-none text-slate-800 placeholder:text-slate-800 bg-[#f2b99e70] border-[0.2rem] border-[#8a5551d0] rounded-[1.25rem] outline-none font-[Comfortaa] p-2 indent-2 leading-5 text-[0.9rem] bg-opacity-30"
+                                rows={250}
+                                placeholder="Derrame seus pensamentos aqui ..."
+                                value={postagem.texto}
+                                onChange={(event: ChangeEvent<HTMLTextAreaElement>) => handleMessageChange(event)}
+                                name="texto"
+                            ></textarea>
 
-                <form className="flex flex-col items-center justify-between w-[95%] h-[95%] rounded-r-[1.25rem]" onSubmit={gerarNovaPostagem}>
-                    <label htmlFor="titulo"></label>
-                    <input type="text"
-                        className="text font-[600] max-h-[8rem] w-[90%] inline-block resize-none text-slate-800 placeholder:text-slate-800 bg-[#f2b99e70] border-[0.2rem] border-[#8a5551d0] rounded-[1.25rem] outline-none font-[Comfortaa] p-2 indent-2 leading-5 text-[0.9rem] bg-opacity-30"
-                        placeholder="Título da postagem"
-                        value={postagem.titulo}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        name="titulo"
-                        required />
+                            <div className="flex flex-col gap-2">
+                                <select name="tema" id="tema" className='border-none outline-none p-2 rounded-[1.25rem] text-[#bb3e53] bg-[#f2b99e] focus:bg-[#f2b99e] font-[Comfortaa] overflow-hidden'
+                                    onChange={(e) => buscarTemaPorId(e.currentTarget.value)}
+                                >
+                                    <option className='rounded-[1.25rem] border-none outline-none bg-[#f2b99e] focus:bg-[#f2b99e] ' value="" selected disabled>Selecione um Tema</option>
+                                    {temas.map((tema) => (
+                                        <option className='rounded-[1.25rem] border-none outline-none' key={tema.id} value={tema.id} >{tema.descricao}</option>
+                                    ))}
+                                </select>
+                            </div>
 
-                    <label htmlFor="texto"></label>
-                    <textarea className="text font-[600] max-h-[8rem] w-[90%] inline-block resize-none text-slate-800 placeholder:text-slate-800 bg-[#f2b99e70] border-[0.2rem] border-[#8a5551d0] rounded-[1.25rem] outline-none font-[Comfortaa] p-2 indent-2 leading-5 text-[0.9rem] bg-opacity-30"
-                        rows={250}
-                        placeholder="Derrame seus pensamentos aqui ..."
-                        value={postagem.texto}
-                        onChange={(event: ChangeEvent<HTMLTextAreaElement>) => handleMessageChange(event)}
-                        name="texto"
-                    ></textarea>
+                            <button
+                                type='submit'
+                                disabled={carregandoTema}
+                                className='flex justify-center items-center rounded-[1.25rem] disabled:bg-[#e9b49c] hover:bg-[#f16d41] text-[#bb3e53] disabled:hover:text-[#bb3e53] hover:text-[#f5f5f5] font-[500] w-[70%] p-2 font-[Comfortaa] hover:shadow-sm'
+                            >
+                                {isLoading ?
+                                    <l-leapfrog
+                                        color={'#f5f5f5'}
+                                        size={30}
+                                        speed={1.5}
+                                    /> :
+                                    <span>Confirmar</span>
+                                }
+                            </button>
+                        </form>
 
-                    <div className="flex flex-col gap-2">
-                        <select name="tema" id="tema" className='border-none outline-none p-2 rounded-[1.25rem] text-[#bb3e53] bg-[#f2b99e] hover:bg-[#f2b99e] font-[Comfortaa]'
-                            onChange={(e) => buscarTemaPorId(e.currentTarget.value)}
-                        >
-                            <option className='rounded-[1.25rem] border-none outline-none bg-[#f2b99e] hover:bg-[#f2b99e] ' value="" selected disabled>Selecione um Tema</option>
-                            {temas.map((tema) => (
-                                <option className='rounded-[1.25rem] border-none outline-none' key={tema.id} value={tema.id} >{tema.descricao}</option>
-                            ))}
-                        </select>
                     </div>
-
-                    <button
-                        type='submit'
-                        disabled={carregandoTema}
-                        className='flex justify-center items-center rounded-[1.25rem] disabled:bg-[#e9b49c] hover:bg-[#f16d41] text-[#bb3e53] disabled:hover:text-[#bb3e53] hover:text-[#f5f5f5] font-[500] w-[70%] p-2 font-[Comfortaa] hover:shadow-sm'
-                    > 
-                        {isLoading ?
-                            <l-leapfrog
-                                color={'#f5f5f5'}
-                                size={30}
-                                speed={1.2}
-                            /> :
-                            <span>Confirmar</span>
-                        }
-                    </button>
-                </form>
-
-            </div>
-        </div>
+                </div>
+            </section>
+        </main>
 
         // <div className="container flex flex-col mx-auto items-center">
         //     <h1 className="text-4xl text-center my-8">
