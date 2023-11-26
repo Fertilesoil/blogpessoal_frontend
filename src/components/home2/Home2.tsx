@@ -1,10 +1,19 @@
 ﻿import ListaPostagens from "../../components/postagens/listaPostagens/ListaPostagens"
 import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem"
+import FormularioPostagem from "../postagens/formularioPostagem/FormularioPostagem"
+import './home.css'
 
 function Home() {
    return (
-      <>
-         <div className="bg-indigo-900 flex justify-center">
+      <main className="flex flex-col items-center">
+
+         <section className="relative mt-4 w-[90vw] flex items-center h-[23rem] border-dashed border-[0.2rem] rounded-[1.25rem] border-[#f16d41] px-2">
+
+         <FormularioPostagem />
+
+         </section>
+
+         {/* <div className="bg-indigo-900 flex justify-center">
             <div className='container grid grid-cols-2 text-white'>
                <div className="flex flex-col gap-4 items-center justify-center py-4">
                   <h2 className='text-5xl font-bold'>
@@ -16,7 +25,7 @@ function Home() {
 
                   <div className="flex justify-around gap-4">
                      <div className="flex justify-around gap-4">
-                        <ModalPostagem />
+                        
                      </div>
                   </div>
                </div>
@@ -29,10 +38,13 @@ function Home() {
                   />
                </div>
             </div>
-         </div>
+         </div> */}
 
+         {/* <ModalPostagem /> */}
          <ListaPostagens />
-      </>
+
+
+      </main>
    )
 }
 

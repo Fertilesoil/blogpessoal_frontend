@@ -43,7 +43,7 @@ function Login() {
                <div className="bg-forms w-[28.3rem] h-[95%] backdrop-blur-[15px] rounded-[2.5rem]">
                   <form onSubmit={login} className='w-[100%] h-[100%] flex flex-col justify-center items-center gap-10'>
 
-                     <h1 className='text-[5em] text-[#bb3e53] font-extrabold'>Login</h1>
+                     <h1 className='text-[5em] text-[#bb3e53] font-extrabold font-[Comfortaa]'>Login</h1>
 
                      <div className='flex w-[90%] h-[9%] items-center justify-center '>
                         <label htmlFor="usuario"></label>
