@@ -1,9 +1,9 @@
-﻿div.bg {
-  background-image: url(../../assets/img/img-cadastro.jpg);
+﻿.bg2 {
+  background-image: url(../../../assets/img/img-cadastro.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  display: inline-block;
-  object-fit: contain;
+  background-size: cover;
+  display: block;
 }
 
 .font {

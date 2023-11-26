@@ -11,14 +11,14 @@
   font-family: 'Comfortaa', sans-serif;
 }
 
-.bg-img-2 {
+/* .bg-img-2 {
   background-image: url(/src/assets/img/img-cadastro.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   object-fit: fill;
   display: block;
-}
+} */
 
 .bg-forms-2 {
   background-color: rgba(255, 255, 255, 0.19);
